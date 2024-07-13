@@ -17,3 +17,20 @@ const throwError = (message: string): string => {
 
   return message;
 };
+
+const foreCast = {
+  weather: 'snny',
+  date: new Date(),
+};
+
+const logWeather = ({
+  weather,
+  date,
+}: {
+  weather: string;
+  date: Date;
+}): void => {
+  console.log(weather);
+};
+
+logWeather(foreCast);
