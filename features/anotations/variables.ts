@@ -36,3 +36,13 @@ for (let i = 0; i < words.length; i += 1) {
     foundWords = true;
   }
 }
+
+// 3) vairable whoes type cannot be infered correctly
+let numbers = [-1, -2, 13];
+let numbersAboveZero: boolean | number = false;
+
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] > 0) {
+    numbersAboveZero = numbers[i];
+  }
+}
