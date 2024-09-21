@@ -34,3 +34,37 @@ const checkSum = (x: number, y: number): void => {
   }
 }
 
+// object type
+const person = (person: { firstName: string, lastName: string}): void => {
+  console.log(`${person.firstName} ${person.lastName}`)
+}
+
+// type alias 
+type Point = {
+  x: number,
+  y: number,
+}
+
+let coordinates: Point = { x: 3, y: 5}
+
+
+// Type unknown a better alternative to any type
+
+let x: unknown;
+x = 23;
+x = "praveen";
+
+if (typeof x === "string") {   
+  console.log(x)    // type of x is automatically string here 
+}
+if (typeof x === 'number') {
+  console.log(x.toFixed(2))   // type of x is number automatically here
+}
+
+
+// arrays
+
+const fruites: string[] = ['apple', 'banana'] // array of strings this will only contain string
+
+
+const cars: readonly string[] = ['bmw', 'honda', 'maruti']  // readonly will prevent it from changing it
